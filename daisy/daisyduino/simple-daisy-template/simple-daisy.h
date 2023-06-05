@@ -122,13 +122,13 @@ public:
 using DaisyPin = Pin<Analog, Digital>; 
 using OnTheBackDaisyPin = Pin<AnalogOnTheBack, DigitalOnTheBack>;
 
-}
-}
+};
+};
 
-#ifdef DAISY_IS_ON_THE_BACK
-#define A(p) synthux::simple::OnTheBackDaisyPin::a(synthux::simple::AnalogOnTheBack::p)
-#define D(p) synthux::simple::OnTheBackDaisyPin::d(synthux::simple::DigitalOnTheBack::p)
-#else
+#ifndef DAISY_IS_ON_THE_BACK
 #define A(p) synthux::simple::DaisyPin::a(synthux::simple::Analog::p)
 #define D(p) synthux::simple::DaisyPin::d(synthux::simple::Digital::p)
+#else
+#define A(p) synthux::simple::OnTheBackDaisyPin::a(synthux::simple::AnalogOnTheBack::p)
+#define D(p) synthux::simple::OnTheBackDaisyPin::d(synthux::simple::DigitalOnTheBack::p)
 #endif

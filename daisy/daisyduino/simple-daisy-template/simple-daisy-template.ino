@@ -15,7 +15,7 @@
 // To grab a pin capable of ADC, type A( and  press Ctr + Space 
 // to bring the list of ADC capable pins.   
 // To grab a digital pin type D( and press Ctr + Space to bring 
-// the list of digital pins.   
+// the list of digital pins.
 
 ///////////////////////////////////////////////////////////////
 ///////////////////// AUDIO CALLBACK (PATCH) //////////////////
